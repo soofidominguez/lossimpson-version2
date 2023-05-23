@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Quita el formato por defecto del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /*hace que el calculo de padding sea el mismo que el tamaño que tenga*/
+}
+
+.bg-nav {
+    background-color: #a8a8e7;
+}
+
+.cards {
+    text-align: center;
+    padding: 0px 20px;
+    background-color: #a8a8e7; /*fondo cards*/
+    background-image: url('../Imagenes/Cielo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.matt {
+    max-width: 100%;
+    height: 90vh; /*veeer*/
+    object-fit: cover;
+}
+
+.cards img { /*imagenes cards*/
+    max-width: 100%;
+    object-fit: cover;
+    padding: 10px;
+    margin: auto;
+}
+
+
+.cards__body { /*formato cards*/
+    display: inline-block;
+    width: 40%;
+    text-align: left ;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+
+.cards__body h2, .cards__body p { /*formato texto cards*/
+    padding: 15px;
+}
+
+.cards__body h2 {
+    font-weight: bold;
+}
+
+.bg {
+    background-image: url('../Imagenes/Cielo.jpg');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+    /*height: 70px;*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bg h2 {
+    font-weight: bold;
+    color: rgb(255, 253, 153);
+}
+
+/*bootstrap*/
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand img {
+    width: 140px;
+    margin: 0px 0px 0px 40px; 
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    margin: 0 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: yellow;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    background-color: yellow;
+    transition: background-color 0.3s ease;
+}
+
+.container-fluid {
+    color:rgb(255, 253, 153)
+}
+
+.btn-outline-success {
+    margin: 10px 40px;
+}
+
+
+.btn-outline-success {
+    border-width: 2px; /* ancho del borde */
+    font-weight: bold; /* tipografía en negrita */
+    color: rgb(255, 253, 153); /*color de texto*/
+    border-color: rgb(255, 253, 153); /*color de borde*/
+    
+}
+
+.btn-outline-success:hover { /*animaciones al pasar el cursor*/
+    background-color: rgb(255, 253, 153);
+    color: #7474e9 ;
+    border-color:rgb(255, 253, 153);
+}
+
+.btn-outline-success  {
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color:none
+}
+
+.img-fluid { /*imagen Matt Groening*/
+    margin: auto;
+    object-fit: contain;
+}
+
+.matt { /*bordes card Matt*/
+    border-radius: 0;
+    border: none;
+    padding: 30px;
+} 
+
+.card-body {
+    margin: 30px ;
+}
+
+.card-title { /*titulo matt groening*/
+    font-size: 42px;
+    font-weight: bold;
+    margin: 60px /*maren superior*/ 50px /*margen derecho*/ 30px /*margen inferior*/ 0px; /*margen izquierdo*/
+}
+
+.card-text { /*texto matt groening*/
+    font-size: 18px;
+    margin: 10px /*maren superior*/ 50px /*margen derecho*/ 20px /*margen inferior*/ 0px; /*margen izquierdo*/
+}
+
+.logo-footer {
+    width: 40%
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cards__body {
+    width: calc(50% - 15px); /* El ancho de cada card será del 50% menos el espacio entre ellas */
+    margin-bottom: 40px;
+    overflow: hidden; /* Recorta el contenido que exceda el tamaño de la card */
+  }
+  
+
+
+  @media screen and (max-width: 891px) {
+    .cards {
+      flex-direction: column; /* Cambia la dirección de las cards a una columna */
+      align-items: center; /* Centra las cards horizontalmente */
+    }
+  
+    .cards__body {
+      width: 100%; /* Las cards ocuparán el ancho completo */
+      margin-bottom: 20px; /* Agrega un margen inferior */
+      overflow: hidden; /* Recorta el contenido que exceda el tamaño de la card */
+    }
+
+    .matt {
+        flex-direction: column; /* Cambia la dirección de las cards a una columna */
+        align-items: center; /* Centra las cards horizontalmente */
+        width: 100%; /* Las cards ocuparán el ancho completo */
+        padding: 15px;
+        height: 90%;
+    }
+}
+
+
+
+.card-text .card-text{
+    margin: 10px;
+    padding: 0px;
+}
+
+
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo-footer {
+      width: 90px; /* Ajusta el ancho de la imagen según tus necesidades */
+      order: 2; /* Cambia el orden de aparición de la imagen en el flujo */
+      margin: 20px;
+    }
+  
+    .nav {
+      order: 3; /* Cambia el orden de aparición de la lista de navegación en el flujo */
+    }
+
+    .nav-link {
+        padding: 0px;
+    }
+  }
+
+  .bg-header {
+    padding: 30px;
+    background-image: url('../Imagenes/Cielo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+
+  .card__header {
+        width: 100%;
+        text-align: left;
+        background-color: white;
+        border-radius: 10px;
+        border: 3px solid rgb(255, 253, 153); /* Cambia el color del borde a #a8a8e7 */
+        max-width: 100%;
+        object-fit: cover;
+        padding: 10px;
+        margin: auto;
+  }
+
+  .bg-header h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    color: #8585da;
+  }
+  
+  .bg-header p {
+    padding: 10px;
+    font-size: 15px;
+    color: #8585da;
+  }
+  
+  .card__header hr {
+    border-top: 2px solid #7474e9; /* Color de la línea */
+    margin: 10px 0; /* Margen superior e inferior */
+  }
+
+.nav-link {
+    font-weight: bold;
+}
